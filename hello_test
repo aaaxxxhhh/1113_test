@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard", sans-serif;
+      background: linear-gradient(135deg, #eef2ff 0%, #fdf2f8 100%);
+      color: #1f2937;
+    }
+    .card {
+      text-align: center;
+      background: #ffffff;
+      padding: 56px 64px;
+      border-radius: 24px;
+      box-shadow: 0 20px 50px rgba(79, 70, 229, 0.12);
+    }
+    h1 {
+      font-size: 56px;
+      font-weight: 800;
+      background: linear-gradient(90deg, #4f46e5, #db2777);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 12px;
+    }
+    p { font-size: 18px; color: #6b7280; margin-bottom: 28px; }
+    button {
+      font-size: 16px;
+      font-weight: 600;
+      padding: 12px 28px;
+      border: none;
+      border-radius: 999px;
+      background: #4f46e5;
+      color: #ffffff;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    button:hover { background: #4338ca; }
+    @media (prefers-color-scheme: dark) {
+      body { background: linear-gradient(135deg, #111827 0%, #1e1b4b 100%); color: #f9fafb; }
+      .card { background: #1f2937; box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4); }
+      p { color: #9ca3af; }
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <h1>Hello!</h1>
+    <p>AIPM 첫 번째 페이지입니다.</p>
+    <button id="btn" type="button">인사하기</button>
+  </main>
+  <script>
+    const btn = document.getElementById('btn');
+    btn.addEventListener('click', () => {
+      btn.textContent = '반가워요 👋';
+    });
+  </script>
+</body>
+</html>
